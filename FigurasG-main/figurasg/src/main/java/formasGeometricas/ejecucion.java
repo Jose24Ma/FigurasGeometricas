@@ -5,49 +5,62 @@ import java.util.Scanner;
 public class ejecucion {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        pentagono pentagono = new pentagono();
-        decagono decagono = new decagono();
-        rombo rombo = new rombo();
+        Scanner scanner = new Scanner(System.in);
         int seleccion;
         System.out.println("Eliga una forma : 1.Pentagono\n2.Decagono\n3.Rombo");
-        seleccion = sc.nextInt();
+        seleccion = scanner.nextInt();
 
         switch (seleccion) {
             case 1:
-                System.out.println("Ingrese el valor del lado");
-                double lado = sc.nextDouble();
-                pentagono.setLado(lado);
-                pentagono.calcularPerimetro();
-                System.out.println("Perimetro Pentagono " + pentagono.getPerimetro());
-                System.out.println("Ingrese el valor de la apotema");
-                pentagono.setApotema(sc.nextDouble());
-                pentagono.calcularArea();
-                System.out.println("Area Pentagono " + pentagono.getAreap());
+                pentagono(scanner);
                 break;
             case 2:
-                System.out.println("Ingrese el valor del lado");
-                decagono.setLadoD(sc.nextDouble());
-                decagono.calcularPerimetro();
-                System.out.println("Perimetro Decagono " + decagono.getPerimetroD());
-                System.out.println("Ingrese el valor de la apotema");
-                decagono.setApotemaD(sc.nextDouble());
-                decagono.calcularArea();
-                System.out.println("Area Decagono " + decagono.getAreaD());
+                decagono(scanner);
                 break;
             case 3:
-                System.out.println("Ingrese el valor del lado");
-                rombo.setLadoR(sc.nextDouble());
-                rombo.calcularPerimetro();
-                System.out.println("Perimetro Rombo " + rombo.getPerimetroR());
-                System.out.println("Ingrese de la Diagonal Mayor");
-                rombo.setDiagonalMayorR(sc.nextDouble());
-                System.out.println("Ingrese de la Diagonal Menor");
-                rombo.setDiagonalMenorR(sc.nextDouble());
-                rombo.calcularArea();
-                System.out.println("Area Rombo " + rombo.getAreaR());
+                rombo(scanner);
                 break;
         }
-        sc.close();
+        scanner.close();
+    }
+
+    public static void pentagono(Scanner scanner) {
+        pentagono p = new pentagono();
+        System.out.println("Ingrese el valor del lado");
+        double lado = scanner.nextDouble();
+        p.setLado(lado);
+        p.calcularPerimetro();
+        System.out.println("Perimetro Pentagono " + p.getPerimetro());
+        System.out.println("Ingrese el valor de la apotema");
+        p.setApotema(scanner.nextDouble());
+        p.calcularArea();
+        System.out.println("Area Pentagono " + p.getAreap());
+    }
+
+    public static void decagono(Scanner scanner) {
+        decagono d = new decagono();
+        System.out.println("Ingrese el valor del lado");
+        d.setLadoD(scanner.nextDouble());
+        d.calcularPerimetro();
+        System.out.println("Perimetro Decagono " + d.getPerimetroD());
+        System.out.println("Ingrese el valor de la apotema");
+        d.setApotemaD(scanner.nextDouble());
+        d.calcularArea();
+        System.out.println("Area Decagono " + d.getAreaD());
+
+    }
+
+    public static void rombo(Scanner scanner) {
+        rombo r = new rombo();
+        System.out.println("Ingrese el valor del lado");
+        r.setLadoR(scanner.nextDouble());
+        r.calcularPerimetro();
+        System.out.println("Perimetro Rombo " + r.getPerimetroR());
+        System.out.println("Ingrese de la Diagonal Mayor");
+        r.setDiagonalMayorR(scanner.nextDouble());
+        System.out.println("Ingrese de la Diagonal Menor");
+        r.setDiagonalMenorR(scanner.nextDouble());
+        r.calcularArea();
+        System.out.println("Area Rombo " + r.getAreaR());
     }
 }
