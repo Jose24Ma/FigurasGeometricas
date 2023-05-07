@@ -22,20 +22,20 @@ function calcularPerimetroFigura() {
 
 function calcularAreaFigura() {
   const figura = document.getElementById("figura").value;
-  let areaR,areaD = 0;
+
   
   switch(figura) {
     case "decagono":
       const perimetroDecagono = parseInt(document.getElementById("perimetroResultado").value);
       const apotemaDecagono = parseInt(document.getElementById("apotema").value);
-      areaD = perimetroDecagono * apotemaDecagono / 2;
-      document.getElementById("areaResultado").value = areaD;
+      const areaDecagono = perimetroDecagono * apotemaDecagono / 2;
+      document.getElementById("areaResultado").value = areaDecagono;
       break;
     case "rombo":
       const diagonalMayor = parseInt(document.getElementById("diagonalmayor").value);
       const diagonalMenor = parseInt(document.getElementById("diagonalmenor").value);
-      areaR = diagonalMayor * diagonalMenor / 2;
-      document.getElementById("areaResultadoRombo").value = areaR;
+      const areaRombo = diagonalMayor * diagonalMenor / 2;
+      document.getElementById("areaResultadoRombo").value = areaRombo;
       break;
     default:
       console.error("Figura no soportada");
