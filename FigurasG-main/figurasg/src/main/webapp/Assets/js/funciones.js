@@ -1,6 +1,6 @@
 function obtenerPerimetroDecagono() {
     const ladoDecagono = parseInt(document.getElementById("lado").value);
-    const perimetroDecagono = lado * 5;
+    const perimetroDecagono = ladoDecagono * 5;
     document.getElementById("perimetroResultado").value = perimetroDecagono;
 }
 function obtenerAreaDecagono() {
@@ -9,18 +9,18 @@ function obtenerAreaDecagono() {
     const areaDecagono = perimetroDecagono * apotemaDecagono / 2;
     document.getElementById("areaResultado").value = areaDecagono;
 }
-function obtenerPerimetroRombo() {
+function PerimetroRombo() {
     const ladoRombo = parseInt(document.getElementById("lado").value);
     const perimetroRombo = ladoRombo * 4;
     document.getElementById("perimetroResultado").value = perimetroRombo;
 }
-function obtenerAreaRombo() {
+function AreaRombo() {
     const diagonalMayor = parseInt(document.getElementById("diagonalmayor").value);
     const diagonalMenor = parseInt(document.getElementById("diagonalmenor").value);
     const areaRombo = diagonalMayor * diagonalMenor / 2;
     document.getElementById("areaResultadoRombo").value = areaRombo;
 }
-function obtenerPerimetroPentagono() {
+function EncontrarPerimetroPentagono() {
     const ladoPentagono = parseInt(document.getElementById("lado").value);
     const perimetroPentagono = ladoPentagono * 5;
     document.getElementById("perimetroResultado").value = perimetroPentagono;
