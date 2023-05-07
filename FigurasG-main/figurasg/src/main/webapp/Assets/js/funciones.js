@@ -1,13 +1,13 @@
-function obtenerArea() {
-    const p = parseInt(document.getElementById("perimetroResultado").value);
-    const h = parseInt(document.getElementById("apotema").value);
-    const area = p * h / 2;
-    document.getElementById("areaResultado").value = area;
+function obtenerPerimetroDecagono() {
+    const ladoDecagono = parseInt(document.getElementById("lado").value);
+    const perimetroDecagono = lado * 5;
+    document.getElementById("perimetroResultado").value = perimetroDecagono;
 }
-function obtenerPerimetro() {
-    const lado = parseInt(document.getElementById("lado").value);
-    const perimetro = lado * 5;
-    document.getElementById("perimetroResultado").value = perimetro;
+function obtenerAreaDecagono() {
+    const perimetroDecagono = parseInt(document.getElementById("perimetroResultado").value);
+    const apotemaDecagono = parseInt(document.getElementById("apotema").value);
+    const areaDecagono = perimetroDecagono * apotemaDecagono / 2;
+    document.getElementById("areaResultado").value = areaDecagono;
 }
 function obtenerPerimetroRombo() {
     const ladoRombo = parseInt(document.getElementById("lado").value);
