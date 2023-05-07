@@ -21,24 +21,30 @@ function calcularPerimetroFigura() {
 }
 
 function calcularAreaFigura() {
-  const figura = document.getElementById("figura").value;
+ const figura = document.getElementById("figura").value;
 
-  
-  switch(figura) {
-    case "decagono":
-      const perimetroDecagono = parseInt(document.getElementById("perimetroResultado").value);
-      const apotemaDecagono = parseInt(document.getElementById("apotema").value);
-      const areaDecagono = perimetroDecagono * apotemaDecagono / 2;
-      document.getElementById("areaResultado").value = areaDecagono;
-      break;
-    case "rombo":
-      const diagonalMayor = parseInt(document.getElementById("diagonalmayor").value);
-      const diagonalMenor = parseInt(document.getElementById("diagonalmenor").value);
-      const areaRombo = diagonalMayor * diagonalMenor / 2;
-      document.getElementById("areaResultadoRombo").value = areaRombo;
-      break;
-    default:
-      console.error("Figura no soportada");
-  }
+    switch (figura) {
+        case "decagono":
+            calcularAreaDecagono();
+            break;
+        case "rombo":
+            calcularAreaRombo();
+            break;
+        default:
+            console.error("Figura no soportada");
+    }
+    function calcularAreaDecagono() {
+        const perimetroDecagono = parseInt(document.getElementById("perimetroResultado").value);
+        const apotemaDecagono = parseInt(document.getElementById("apotema").value);
+        const areaDecagono = perimetroDecagono * apotemaDecagono / 2;
+        document.getElementById("areaResultado").value = areaDecagono;
+    }
+
+    function calcularAreaRombo() {
+        const diagonalMayor = parseInt(document.getElementById("diagonalmayor").value);
+        const diagonalMenor = parseInt(document.getElementById("diagonalmenor").value);
+        const areaRombo = diagonalMayor * diagonalMenor / 2;
+        document.getElementById("areaResultadoRombo").value = areaRombo;
+    }
 }
 
